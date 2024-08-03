@@ -38,9 +38,9 @@ struct Args {
     listen: bool,
 
 
-    /// The maximal file size that can be uploaded
-    #[arg(short, long, default_value_t = u64::MAX)]
-    max_file_size: u64,
+    ///// The maximal file size that can be uploaded
+    //#[arg(short, long, default_value_t = u64::MAX)]
+    //max_file_size: u64,
 }
 
 #[derive(Debug, Deserialize)]
@@ -125,7 +125,8 @@ async fn main() -> tide::Result<()> {
     println!("{0}{1:58}{0}", "│".blue(), mode);
     let target_path = args.path.as_path().canonicalize().await?;
     let target_trunc = if target_path.to_str().unwrap().len() > 36 { ".." } else { "" };
-    let target = format!("{}{}{}", "    Target: ".bold(), &target_path.to_str().unwrap()[0..34], target_trunc);
+    let target_text = if target_path.to_str().unwrap().len() > 36 { &target_path.to_str().unwrap()[0..34] } else { &target_path.to_str().unwrap() };
+    let target = format!("{}{}{}", "    Target: ".bold(), target_text, target_trunc);
     println!("{0}{1:58}{0}", "│".blue(), target);
     println!("{0}{1:50}{0}", "│".blue(), "");
     for info in listener.info().iter() {
