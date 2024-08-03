@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="/bootstrap.bundle.min.js"></script>
+</head>
+<body data-upload="true" data-download="false">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nanoserve</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item nav-download">
+                        <a class="nav-link" href="/download.html">Download</a>
+                    </li>
+                    <li class="nav-item nav-upload" aria-current="page">
+                        <a class="nav-link active" href="/upload.html">Upload</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container page">
+        <label for="drop-zone" class="drop-container container-md" id="drop-container">
+            <span class="drop-title">Drop files here</span>
+            or
+            <input type="file" id="drop-zone" class="form-control" required>
+        </label>
+        <button type="button" class="btn btn-primary" id="upload-button">Upload</button>
+        <div id="progress-container"></div>
+    </div>
+    <template id="progress-template">
+        <div class="progress-box">
+            <span class="progress-filename">Filename</span>
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0">0%</div>
+            </div>
+        </div>
+    </template>
+    <script src="/common.js"></script>
+    <script src="/upload.js"></script>
+</body>
+</html>

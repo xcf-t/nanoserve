@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body data-upload="false" data-download="true">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nanoserve</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item nav-download">
+                        <a class="nav-link active" aria-current="page" href="/download.html">Download</a>
+                    </li>
+                    <li class="nav-item nav-upload">
+                        <a class="nav-link" href="/upload.html">Upload</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container page">
+        <div class="list-group" id="file-list"></div>
+    </div>
+    <template id="file-template">
+        <a class="list-group-item d-flex align-items-center file-entry">
+            <i class="bi"></i>
+            <span class="file-name">Name</span>
+            <span class="badge text-bg-primary rounded-pill file-size">4 KiB</span>
+        </a>
+    </template>
+    <template id="dir-template">
+        <a href="#" class="list-group-item d-flex align-items-center file-entry">
+            <i class="bi"></i>
+            <span class="file-name">Name</span>
+            <!--span class="badge text-bg-primary rounded-pill file-size">4 KiB</-->
+        </a>
+    </template>
+    <script src="/common.js"></script>
+    <script src="/download.js"></script>
+</body>
+</html>

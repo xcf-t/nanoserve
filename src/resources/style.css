@@ -1,0 +1,53 @@
+.drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 256px;
+    padding: 24px;
+    border-radius: 8px;
+    border: 2px dashed #555;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+
+.drop-container:hover {
+    background: #313539;
+    border-color: #666;
+}
+
+.drop-container:hover .drop-title {
+    color: #ddd;
+}
+
+.drop-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .3s ease-in-out;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.file-entry {
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.file-size {
+    margin-left: auto;
+}
+
+body[data-upload="false"] .nav-upload {
+    display: none;
+}
+
+body[data-download="false"] .nav-download {
+    display: none;
+}
