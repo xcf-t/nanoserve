@@ -62,16 +62,20 @@ $ nanoserve [PATH] --download --upload --port 3000
 ## Screenshots
 
 <table>
+   <tbody>
+   <tr><td>Download</td></tr>
    <tr>
       <td>
       <img src="screenshot-download.png" alt="Download Screenshot">
       </td>
    </tr>
+   <tr><td>Upload</td></tr>
    <tr>
       <td>
       <img src="screenshot-upload.png" alt="Upload Screenshot">
       </td>
    </tr>
+   </tbody>
 </table>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
