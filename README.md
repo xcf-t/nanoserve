@@ -59,6 +59,23 @@ $ nanoserve [PATH] --download --upload --port 3000
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Screenshots
+
+<table>
+   <tr>
+      <td>
+      <img src="screenshot-download.png" alt="Download Screenshot">
+      </td>
+   </tr>
+   <tr>
+      <td>
+      <img src="screenshot-upload.png" alt="Upload Screenshot">
+      </td>
+   </tr>
+</table>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- LICENSE -->
 ## License
 
