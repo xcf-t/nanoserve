@@ -2,7 +2,7 @@
 <a id="readme-top"></a>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## NanoServe
 
 I needed a simple too to transfer files between web-browsers. This is my naive approach at getting this in a single binary.
 
